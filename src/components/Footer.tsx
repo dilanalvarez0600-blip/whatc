@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 
-const CONTRACT = "PASTE_CONTRACT_HERE";
+const CONTRACT = "0xfd1c237b46d03a614ebd69a51455dce3a0ce4487";
 
 export default function Footer() {
   return (
@@ -25,7 +25,7 @@ export default function Footer() {
           <span className="text-border">◆</span>
           <a href="https://x.com/whatcanilose" target="_blank" rel="noopener noreferrer" className="text-white-dim hover:text-cyan text-sm transition-colors">X</a>
           <span className="text-border">◆</span>
-          <a href="#" className="text-white-dim hover:text-cyan text-sm transition-colors">DexScreener</a>
+          <a href="https://dexscreener.com/robinhood/0xd903709cfddf776aa8bd258544f0a3cbb5298b6a7a70018bfbce268d671b0526" target="_blank" rel="noopener noreferrer" className="text-white-dim hover:text-cyan text-sm transition-colors">DexScreener</a>
         </div>
 
         <div className="mb-8">

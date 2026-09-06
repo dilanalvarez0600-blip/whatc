@@ -3,7 +3,7 @@
 import { useState, useCallback } from "react";
 import { motion } from "framer-motion";
 
-const CONTRACT = "PASTE_CONTRACT_HERE";
+const CONTRACT = "0xfd1c237b46d03a614ebd69a51455dce3a0ce4487";
 
 const STEPS = [
   { num: "01", title: "Get a Wallet", desc: "Download a Robinhood-compatible wallet and set it up." },

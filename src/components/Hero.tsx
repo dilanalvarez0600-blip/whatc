@@ -4,7 +4,7 @@ import { useState, useEffect, useCallback } from "react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 
-const CONTRACT = "PASTE_CONTRACT_HERE";
+const CONTRACT = "0xfd1c237b46d03a614ebd69a51455dce3a0ce4487";
 
 export default function Hero() {
   const [revealed, setRevealed] = useState(false);

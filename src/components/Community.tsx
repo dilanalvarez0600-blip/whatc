@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 const LINKS = [
   { name: "X (Twitter)", desc: "Follow the signal", href: "https://x.com/whatcanilose", icon: "𝕏" },
-  { name: "DexScreener", desc: "Watch the chart", href: "#", icon: "◎" },
+  { name: "DexScreener", desc: "Watch the chart", href: "https://dexscreener.com/robinhood/0xd903709cfddf776aa8bd258544f0a3cbb5298b6a7a70018bfbce268d671b0526", icon: "◎" },
 ];
 
 export default function Community() {

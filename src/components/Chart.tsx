@@ -2,10 +2,13 @@
 
 import { motion } from "framer-motion";
 
+const PAIR_URL =
+  "https://dexscreener.com/robinhood/0xd903709cfddf776aa8bd258544f0a3cbb5298b6a7a70018bfbce268d671b0526";
+
 export default function Chart() {
   return (
     <section id="chart" className="relative py-28 sm:py-36 px-4">
-      <div className="max-w-4xl mx-auto text-center">
+      <div className="max-w-5xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -14,7 +17,7 @@ export default function Chart() {
         >
           <p className="text-cyan text-sm tracking-widest uppercase mb-4">◆ Live Chart ◆</p>
           <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-16">
-            Chart
+            $WhatC / ETH
           </h2>
         </motion.div>
 
@@ -25,23 +28,22 @@ export default function Chart() {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="border border-border bg-surface rounded-2xl overflow-hidden glow-border"
         >
-          <div className="relative aspect-[16/9] sm:aspect-[2/1] flex items-center justify-center">
-            <div className="text-center px-4">
-              <p className="text-cyan text-4xl sm:text-6xl font-bold mb-4 glow-text">
-                NO CHART YET
-              </p>
-              <p className="text-white-dim text-sm sm:text-base max-w-md mx-auto">
-                Can&apos;t chart what doesn&apos;t exist yet.
-                <br />
-                <span className="text-cyan">But when it does, you&apos;ll see it here.</span>
-              </p>
-            </div>
-          </div>
+          <iframe
+            src={`${PAIR_URL}?embed=1&theme=dark&trades=0&info=0`}
+            className="w-full aspect-[4/5] sm:aspect-[16/9] block"
+            title="$WhatC Live Chart on DexScreener"
+            loading="lazy"
+          />
         </motion.div>
 
-        <p className="text-white-dim text-xs text-center mt-6 tracking-wider">
-          Chart will be embedded from DexScreener when available
-        </p>
+        <a
+          href={PAIR_URL}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block mt-8 border border-border-light hover:border-cyan text-white-dim hover:text-cyan text-sm tracking-wider px-8 py-3 rounded-full transition-all duration-200"
+        >
+          OPEN ON DEXSCREENER ↗
+        </a>
       </div>
     </section>
   );
