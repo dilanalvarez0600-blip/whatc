@@ -38,7 +38,7 @@ export default function Navbar() {
         </div>
 
         <div className="hidden md:flex items-center gap-3">
-          <a href="#" target="_blank" rel="noopener noreferrer" className="text-white-dim hover:text-cyan text-sm transition-colors">𝕏</a>
+          <a href="https://x.com/whatcanilose" target="_blank" rel="noopener noreferrer" className="text-white-dim hover:text-cyan text-sm transition-colors">𝕏</a>
           <a href="#" target="_blank" rel="noopener noreferrer" className="text-white-dim hover:text-cyan text-sm transition-colors">TG</a>
           <a
             href="#buy"

@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 
 const LINKS = [
-  { name: "X (Twitter)", desc: "Follow the signal", href: "#", icon: "𝕏" },
+  { name: "X (Twitter)", desc: "Follow the signal", href: "https://x.com/whatcanilose", icon: "𝕏" },
   { name: "Telegram", desc: "Join the void", href: "#", icon: "✈" },
   { name: "DexScreener", desc: "Watch the chart", href: "#", icon: "◎" },
 ];
