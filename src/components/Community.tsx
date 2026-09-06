@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 
 const LINKS = [
   { name: "X (Twitter)", desc: "Follow the signal", href: "https://x.com/whatcanilose", icon: "𝕏" },
-  { name: "Telegram", desc: "Join the void", href: "#", icon: "✈" },
   { name: "DexScreener", desc: "Watch the chart", href: "#", icon: "◎" },
 ];
 
@@ -27,7 +26,7 @@ export default function Community() {
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-5 max-w-2xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 max-w-xl mx-auto">
           {LINKS.map((link, i) => (
             <motion.a
               key={link.name}

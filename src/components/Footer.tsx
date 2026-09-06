@@ -25,8 +25,6 @@ export default function Footer() {
           <span className="text-border">◆</span>
           <a href="https://x.com/whatcanilose" target="_blank" rel="noopener noreferrer" className="text-white-dim hover:text-cyan text-sm transition-colors">X</a>
           <span className="text-border">◆</span>
-          <a href="#" className="text-white-dim hover:text-cyan text-sm transition-colors">Telegram</a>
-          <span className="text-border">◆</span>
           <a href="#" className="text-white-dim hover:text-cyan text-sm transition-colors">DexScreener</a>
         </div>
 
