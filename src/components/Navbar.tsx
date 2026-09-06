@@ -40,7 +40,7 @@ export default function Navbar() {
         <div className="hidden md:flex items-center gap-3">
           <a href="https://x.com/whatcanilose" target="_blank" rel="noopener noreferrer" className="text-white-dim hover:text-cyan text-sm transition-colors">𝕏</a>
           <a
-            href="#buy"
+            href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0xfd1c237b46d03a614ebd69a51455dce3a0ce4487" target="_blank" rel="noopener noreferrer"
             className="bg-cyan hover:bg-cyan-dim text-void text-sm font-bold px-5 py-2 rounded-full transition-colors duration-200"
           >
             Buy $WhatC
@@ -76,7 +76,7 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#buy"
+                href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0xfd1c237b46d03a614ebd69a51455dce3a0ce4487" target="_blank" rel="noopener noreferrer"
                 onClick={() => setOpen(false)}
                 className="bg-cyan text-void font-bold px-8 py-3 rounded-full text-base mt-2"
               >

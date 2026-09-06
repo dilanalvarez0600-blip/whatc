@@ -19,9 +19,9 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-wrap items-center justify-center gap-6 mb-8">
-          <a href="#buy" className="text-white-dim hover:text-cyan text-sm transition-colors">Buy</a>
+          <a href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0xfd1c237b46d03a614ebd69a51455dce3a0ce4487" target="_blank" rel="noopener noreferrer" className="text-white-dim hover:text-cyan text-sm transition-colors">Buy</a>
           <span className="text-border">◆</span>
-          <a href="#chart" className="text-white-dim hover:text-cyan text-sm transition-colors">Chart</a>
+          <a href="https://dexscreener.com/robinhood/0xd903709cfddf776aa8bd258544f0a3cbb5298b6a7a70018bfbce268d671b0526" target="_blank" rel="noopener noreferrer" className="text-white-dim hover:text-cyan text-sm transition-colors">Chart</a>
           <span className="text-border">◆</span>
           <a href="https://x.com/whatcanilose" target="_blank" rel="noopener noreferrer" className="text-white-dim hover:text-cyan text-sm transition-colors">X</a>
           <span className="text-border">◆</span>

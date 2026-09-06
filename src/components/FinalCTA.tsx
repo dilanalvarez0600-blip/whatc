@@ -37,7 +37,7 @@ export default function FinalCTA() {
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <a
-              href="#buy"
+              href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0xfd1c237b46d03a614ebd69a51455dce3a0ce4487" target="_blank" rel="noopener noreferrer"
               className="bg-cyan hover:bg-cyan-dim text-void font-bold text-lg tracking-wider px-12 py-5 rounded-full transition-all duration-200 hover:scale-105 animate-pulse-glow"
             >
               BUY $WhatC

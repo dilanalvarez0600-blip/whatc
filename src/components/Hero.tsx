@@ -105,13 +105,13 @@ export default function Hero() {
           className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
         >
           <a
-            href="#buy"
+            href="https://app.uniswap.org/swap?chain=robinhood&outputCurrency=0xfd1c237b46d03a614ebd69a51455dce3a0ce4487" target="_blank" rel="noopener noreferrer"
             className="bg-cyan hover:bg-cyan-dim text-void font-bold text-base tracking-wider px-10 py-4 rounded-full transition-all duration-200 hover:scale-105 animate-pulse-glow"
           >
             BUY $WhatC
           </a>
           <a
-            href="#chart"
+            href="https://dexscreener.com/robinhood/0xd903709cfddf776aa8bd258544f0a3cbb5298b6a7a70018bfbce268d671b0526" target="_blank" rel="noopener noreferrer"
             className="border border-border-light hover:border-cyan text-white-dim hover:text-cyan text-base tracking-wider px-10 py-4 rounded-full transition-all duration-200"
           >
             VIEW CHART
