@@ -22,7 +22,6 @@ export default function Hero() {
       "Evidence secured.",
       "Copied. You had nothing to lose.",
       "Just keep pushin C.",
-      "The void acknowledges you.",
     ];
     setCopyMsg(msgs[Math.floor(Math.random() * msgs.length)]);
     setCopied(true);
@@ -36,27 +35,25 @@ export default function Hero() {
           src="/banner.png"
           alt="WhatC Banner"
           fill
-          className="object-cover opacity-30"
+          className="object-cover opacity-25"
           priority
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-void/60 via-void/80 to-void" />
+        <div className="absolute inset-0 bg-gradient-to-b from-void/50 via-void/70 to-void" />
       </div>
 
-      <div className="absolute inset-0 grid-bg opacity-[0.04]" />
-
-      <div className="relative z-10 text-center px-4 max-w-5xl mx-auto pt-20">
+      <div className="relative z-10 text-center px-4 max-w-4xl mx-auto pt-24">
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="mb-8"
+          className="mb-10"
         >
           <Image
             src="/logo.png"
             alt="WhatC Character"
-            width={160}
-            height={160}
-            className="mx-auto rounded-full animate-float"
+            width={180}
+            height={180}
+            className="mx-auto rounded-full animate-float drop-shadow-[0_0_40px_rgba(0,229,160,0.3)]"
             priority
           />
         </motion.div>
@@ -65,19 +62,19 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.5 }}
-          className="font-mono text-cyan text-xs sm:text-sm tracking-[0.4em] uppercase mb-6"
+          className="text-cyan text-sm sm:text-base tracking-widest uppercase mb-8"
         >
-          Robinhood Chain
+          ◆ Robinhood Chain ◆
         </motion.p>
 
-        <div className="relative mb-4 min-h-[80px] sm:min-h-[120px] md:min-h-[160px] flex items-center justify-center">
+        <div className="relative mb-6 min-h-[60px] sm:min-h-[100px] md:min-h-[140px] flex items-center justify-center">
           <motion.h1
             initial={{ opacity: 1 }}
             animate={{ opacity: revealed ? 0 : 1 }}
             transition={{ duration: 0.6 }}
-            className="absolute text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-none"
+            className="absolute text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-none"
           >
-            <span className="redacted px-2 sm:px-3 rounded-sm">What&nbsp;C</span>
+            <span className="redacted px-2 sm:px-4 rounded-sm">What&nbsp;C</span>
             <span className="text-white">an I Lose</span>
           </motion.h1>
 
@@ -85,7 +82,7 @@ export default function Hero() {
             initial={{ opacity: 0 }}
             animate={{ opacity: revealed ? 1 : 0 }}
             transition={{ duration: 0.6 }}
-            className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-none"
+            className="text-5xl sm:text-7xl md:text-8xl lg:text-9xl font-bold tracking-tight leading-none"
           >
             <span className="text-cyan glow-text">What C</span>
             <span className="text-white">an I Lose</span>
@@ -96,7 +93,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 1 }}
-          className="text-xl sm:text-2xl md:text-3xl text-white-dim font-light mb-12"
+          className="text-xl sm:text-2xl md:text-3xl text-white-dim font-light mb-14"
         >
           I started with nothing.
         </motion.p>
@@ -105,17 +102,17 @@ export default function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 1.4 }}
-          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-10"
+          className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12"
         >
           <a
             href="#buy"
-            className="bg-cyan hover:bg-cyan-dim text-void font-bold text-sm sm:text-base tracking-wider px-8 py-4 transition-all duration-200 hover:scale-105 animate-pulse-glow"
+            className="bg-cyan hover:bg-cyan-dim text-void font-bold text-base tracking-wider px-10 py-4 rounded-full transition-all duration-200 hover:scale-105 animate-pulse-glow"
           >
             BUY $WhatC
           </a>
           <a
             href="#chart"
-            className="border border-border hover:border-cyan text-white-dim hover:text-cyan font-mono text-sm sm:text-base tracking-wider px-8 py-4 transition-all duration-200"
+            className="border border-border-light hover:border-cyan text-white-dim hover:text-cyan text-base tracking-wider px-10 py-4 rounded-full transition-all duration-200"
           >
             VIEW CHART
           </a>
@@ -125,15 +122,16 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 1.8 }}
+          className="flex items-center justify-center"
         >
-          <div className="inline-flex items-center gap-2 bg-surface border border-border px-4 py-3 max-w-full">
-            <span className="text-white-dim font-mono text-[10px] sm:text-xs shrink-0">CA:</span>
-            <span className="font-mono text-white text-[10px] sm:text-xs truncate max-w-[180px] sm:max-w-none">
+          <div className="inline-flex items-center gap-3 bg-surface border border-border rounded-full px-5 py-3">
+            <span className="text-white-dim text-xs shrink-0">CA:</span>
+            <span className="font-mono text-white text-xs truncate max-w-[160px] sm:max-w-[280px]">
               {CONTRACT}
             </span>
             <button
               onClick={copyContract}
-              className="text-cyan hover:text-cyan-dim font-mono text-[10px] sm:text-xs shrink-0 border border-border hover:border-cyan px-3 py-1 transition-all duration-200"
+              className="text-cyan hover:text-cyan-dim text-xs font-bold shrink-0 transition-colors"
             >
               {copied ? copyMsg : "COPY"}
             </button>
@@ -145,9 +143,9 @@ export default function Hero() {
         initial={{ opacity: 0 }}
         animate={{ opacity: 0.4 }}
         transition={{ duration: 2, delay: 2.5 }}
-        className="absolute bottom-8 animate-float z-10"
+        className="absolute bottom-10 animate-float z-10"
       >
-        <span className="font-mono text-white-dim text-xs tracking-[0.3em]">↓ SCROLL DOWN ↓</span>
+        <span className="text-white-dim text-sm tracking-widest">↓</span>
       </motion.div>
     </section>
   );

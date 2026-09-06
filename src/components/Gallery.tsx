@@ -17,29 +17,24 @@ const CHARACTERS = [
 
 export default function Gallery() {
   return (
-    <section id="gallery" className="relative py-24 sm:py-32 px-4">
-      <div className="max-w-7xl mx-auto">
+    <section id="gallery" className="relative py-28 sm:py-36 px-4">
+      <div className="max-w-6xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 0.6 }}
         >
-          <div className="flex items-center gap-4 mb-6">
-            <span className="font-mono text-cyan text-xs tracking-[0.3em]">02</span>
-            <div className="flex-1 h-px bg-border" />
-            <span className="font-mono text-white-dim text-xs tracking-[0.2em]">MEME VAULT</span>
-          </div>
-
-          <h2 className="text-3xl sm:text-5xl md:text-6xl font-bold mb-4">
-            The <span className="text-cyan glow-text">Many Faces</span> of Nothing
+          <p className="text-cyan text-sm tracking-widest uppercase mb-4">◆ Meme Vault ◆</p>
+          <h2 className="text-4xl sm:text-5xl md:text-6xl font-bold mb-6">
+            The Many Faces of Nothing
           </h2>
-          <p className="text-white-dim text-lg mb-16 max-w-xl">
+          <p className="text-white-dim text-lg mb-16 max-w-lg mx-auto">
             Nine scenes. One character. Zero regrets.
           </p>
         </motion.div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
           {CHARACTERS.map((char, i) => (
             <motion.div
               key={char.tag}
@@ -47,7 +42,7 @@ export default function Gallery() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ duration: 0.5, delay: i * 0.05 }}
-              className="group relative bg-surface border border-border hover:border-cyan transition-all duration-300 overflow-hidden"
+              className="group relative bg-surface border border-border hover:border-cyan rounded-2xl overflow-hidden transition-all duration-300"
             >
               <div className="relative aspect-square overflow-hidden">
                 <Image
@@ -57,14 +52,14 @@ export default function Gallery() {
                   className="object-cover group-hover:scale-105 transition-transform duration-500"
                   sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-void via-transparent to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-void via-transparent to-transparent opacity-90" />
               </div>
 
-              <div className="absolute bottom-0 left-0 right-0 p-4">
-                <span className="font-mono text-cyan text-[10px] tracking-[0.3em] block mb-1">
+              <div className="absolute bottom-0 left-0 right-0 p-5 text-center">
+                <span className="text-cyan text-xs tracking-widest block mb-2">
                   {char.tag}
                 </span>
-                <p className="text-white text-sm font-medium leading-snug">
+                <p className="text-white text-sm font-medium">
                   {char.caption}
                 </p>
               </div>

@@ -3,23 +3,23 @@
 import { motion } from "framer-motion";
 
 const LINES = [
-  "No money.",
-  "No friends.",
-  "No luck.",
-  "Just me.",
-  "",
-  "What can I lose?",
-  "",
-  "I started with nothing.",
-  "I still have most of it.",
-  "",
-  "But nothing is where",
-  "everything begins.",
+  { text: "No money.", style: "normal" },
+  { text: "No friends.", style: "normal" },
+  { text: "No luck.", style: "normal" },
+  { text: "Just me.", style: "normal" },
+  { text: "", style: "spacer" },
+  { text: "What can I lose?", style: "hero" },
+  { text: "", style: "spacer" },
+  { text: "I started with nothing.", style: "normal" },
+  { text: "I still have most of it.", style: "dim" },
+  { text: "", style: "spacer" },
+  { text: "But nothing is where", style: "accent" },
+  { text: "everything begins.", style: "accent" },
 ];
 
 export default function Manifesto() {
   return (
-    <section className="relative py-24 sm:py-32 px-4 bg-surface border-y border-border">
+    <section className="relative py-28 sm:py-36 px-4 bg-surface">
       <div className="max-w-3xl mx-auto text-center">
         <motion.div
           initial={{ opacity: 0 }}
@@ -27,32 +27,30 @@ export default function Manifesto() {
           viewport={{ once: true, margin: "-100px" }}
           transition={{ duration: 1 }}
         >
-          <div className="flex items-center justify-center gap-4 mb-16">
-            <div className="w-12 h-px bg-cyan" />
-            <span className="font-mono text-cyan text-xs tracking-[0.3em]">THE PHILOSOPHY</span>
-            <div className="w-12 h-px bg-cyan" />
-          </div>
+          <p className="text-cyan text-sm tracking-widest uppercase mb-20">◆ The Philosophy ◆</p>
 
-          <div className="space-y-2">
+          <div className="space-y-3">
             {LINES.map((line, i) =>
-              line === "" ? (
-                <div key={i} className="h-6" />
+              line.style === "spacer" ? (
+                <div key={i} className="h-8" />
               ) : (
                 <motion.p
                   key={i}
-                  initial={{ opacity: 0, y: 10 }}
+                  initial={{ opacity: 0, y: 15 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: i * 0.08 }}
-                  className={`text-xl sm:text-3xl md:text-4xl font-bold ${
-                    line === "What can I lose?"
-                      ? "text-cyan glow-text text-3xl sm:text-5xl md:text-6xl"
-                      : line.startsWith("But nothing")
-                      ? "text-cyan"
-                      : "text-white"
-                  }`}
+                  transition={{ duration: 0.5, delay: i * 0.06 }}
+                  className={
+                    line.style === "hero"
+                      ? "text-4xl sm:text-6xl md:text-7xl font-bold text-cyan glow-text"
+                      : line.style === "accent"
+                      ? "text-2xl sm:text-3xl md:text-4xl font-bold text-cyan"
+                      : line.style === "dim"
+                      ? "text-xl sm:text-2xl md:text-3xl font-bold text-white-dim"
+                      : "text-xl sm:text-2xl md:text-3xl font-bold text-white"
+                  }
                 >
-                  {line}
+                  {line.text}
                 </motion.p>
               )
             )}
@@ -62,8 +60,8 @@ export default function Manifesto() {
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 1 }}
-            className="mt-16 font-mono text-white-dim text-xs tracking-[0.3em]"
+            transition={{ duration: 0.6, delay: 0.8 }}
+            className="mt-20 text-white-dim text-sm tracking-widest"
           >
             JUST KEEP PUSHIN C.
           </motion.p>
